@@ -155,6 +155,7 @@ header ul {
 .account-info{
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 
 .loged-in{
@@ -181,6 +182,18 @@ header ul {
 .registration-btn:hover{
     background-color: #4de596c5;
 }
+
+.log-in-list{
+    display: none;
+
+    gap: 8px;
+}
+
+#exit{
+    cursor: pointer;
+}
+
+
 
 /* ======FOOTER STYLES====== */
 

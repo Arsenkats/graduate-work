@@ -1,6 +1,6 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  import { getAuth, GoogleAuthProvider, signInWithPopup,} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
   
   const firebaseConfig = {
     apiKey: "AIzaSyB-RglbxUd5dK3_4M20YrX2QZ3d2BqyV1U",
@@ -31,15 +31,52 @@ googleLogin.addEventListener("click", function () {
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-
-   
   });
 })
 
-function updateUserProfile(user) {
-    const userName = user.displayName;
+function updateUI(user) {
+  const registrationButton = document.getElementById('registration');
+  const loginList = document.getElementById('log-in-list');
 
-    document.getElementById("userName").textContent = userName;
+  if (user) {
+    // Користувач автентифікований, ховаємо кнопку реєстрації
+    if (registrationButton) {
+      registrationButton.style.display = 'none';
+    }
+
+    // Показуємо список log-in-list та заповнюємо його інформацією про користувача
+    if (loginList) {
+      loginList.style.display = 'flex'; // Змінено display на 'flex'
+    }
+  } else {
+    // Користувач не автентифікований, відображаємо кнопку реєстрації
+    if (registrationButton) {
+      registrationButton.style.display = 'block';
+    }
+
+    // Ховаємо список log-in-list
+    if (loginList) {
+      loginList.style.display = 'none';
+    }
+  }
 }
 
-updateUserProfile()
+onAuthStateChanged(auth, (user) => {
+  updateUI(user);
+});
+
+
+const exitButton = document.getElementById('exit');
+
+exitButton.addEventListener('click', () => {
+  // Використовуйте функцію signOut() для виходу з акаунту
+  signOut(auth).then(() => {
+    // Якщо вихід успішний, можна виконати додаткові дії
+    alert('Ви вийшли з акаунту.');
+    window.location.href = '../index.html'; // Перенаправлення на головну сторінку або іншу
+  }).catch((error) => {
+    // Обробка помилок в разі неуспішного виходу
+    console.error('Помилка виходу:', error);
+  });
+});
+

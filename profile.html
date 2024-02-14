@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./js/main.js" defer type="module"></script>
+    <script src="./js/update.js" defer type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,14 +42,24 @@
             <button id="registration" type="button" class="registration-btn">
               Увійти з Google
             </button>
-            <p id="userName" class="registration-link"></p>
+            <ul id="log-in-list" class="log-in-list">
+              <li>
+                <a
+                  href="./profile.html"
+                  id="userName"
+                  class="registration-link"
+                ></a>
+              </li>
+              <li><p class="registration-link">|</p></li>
+              <li><p id="exit" class="registration-link">Вийти</p></li>
+            </ul>
           </div>
         </div>
       </header>
       <main>
         <section id="registration">
           <h1>Your profile</h1>
-          <p id="userName" class="registration-link"></p>
+          <p id="userNameSection" class="registration-link"></p>
         </section>
       </main>
       <footer class="footer-style">
