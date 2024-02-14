@@ -3,12 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <script src="./js/main.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -16,26 +11,53 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Art Stock</title>
+    <title>Art-Stock</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="container header-container">
-        <nav class="header-nav">
-          <a class="logo" href="./index.html"> Art<span>Stock</span></a>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="menu active" href="./index.html">Головна</a>
-            </li>
-            <li class="nav-item">
-              <a class="menu" href="./profile.html">Профіль</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main></main>
-    <footer></footer>
+    <div class="page-container">
+      <header class="page-header">
+        <div class="container header-container">
+          <nav class="header-nav">
+            <a class="logo" href="./index.html">
+              Art<span class="logo-header">Stock</span>
+            </a>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="menu active" href="./index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="menu" href="./profile.html">Профіль</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="account-info">
+            <button id="registration" type="button" class="registration-btn">
+              Увійти з Google
+            </button>
+            <p id="userName" class="registration-link"></p>
+          </div>
+        </div>
+      </header>
+      <main></main>
+      <footer class="footer-style">
+        <div class="container footer-container">
+          <a class="logo footer-logo-bottom" href="./index.html">
+            Art<span class="logo-footer">Stock</span>
+          </a>
+          <p class="footer-paragraph">
+            &COPY; Дипломна робота Кацюби Арсена | КН-41, Львів 2024
+          </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

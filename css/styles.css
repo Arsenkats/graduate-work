@@ -43,7 +43,18 @@ button {
     padding-bottom: 120px;
 }
 
-/* header */
+.page-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+}
+
+
+/*======HEADER STYLES======*/
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
@@ -125,6 +136,71 @@ header ul {
     margin-right: 76px;
 }
 
-.logo span {
+.logo-header {
     color: #2e2f42;
+}
+
+.registration-link{
+    text-decoration: none;
+    display: block;
+    color: #2e2f42a3;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.registration-link:focus,
+.registration-link:hover{
+    color: #4de596;
+}
+
+.account-info{
+    display: flex;
+    gap: 8px;
+}
+
+.loged-in{
+    text-decoration: underline;
+    color: #2e2f42;
+}
+
+.registration-btn{
+    background-color: #4de596;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.registration-btn:focus,
+.registration-btn:hover{
+    background-color: #4de596c5;
+}
+
+/* ======FOOTER STYLES====== */
+
+.footer-style{
+    background-color: #2e2f42;
+}
+
+.footer-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.logo-footer{
+    color: #ffffff;
+}
+
+.footer-logo-bottom{
+    margin-bottom: 16px;
+}
+
+.footer-paragraph{
+    color: #e7e9fc;
 }
