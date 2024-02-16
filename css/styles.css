@@ -4,7 +4,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     background-color: #ffffff;
-    color: #434455;
+    color: #2e2f42;
 
 }
 
@@ -164,6 +164,7 @@ header ul {
 }
 
 .registration-btn{
+    display: none;
     background-color: #4de596;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -193,8 +194,72 @@ header ul {
     cursor: pointer;
 }
 
+/* ======PROFILE INFO====== */
 
+.profile-info{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
+#profile-info{
+    display: none;
+}
+
+#not-log-in{
+    display: none;
+}
+
+.halepa-cont{
+    max-width: 500px;
+    padding: 30px;
+    background-color: #F4F4FD;
+    border: 3px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+    border-radius: 30px;
+}
+
+.halepa{
+    color: #4de596;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.halepa-paragraph{
+    text-align: center;
+}
+
+.profile-name-container{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.profile-picture{
+    border-radius: 50%;
+}
+
+.form-btn{
+    background-color: #4de596;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:focus,
+.form-btn:hover {
+    background-color: #4de596c5;
+}
 /* ======FOOTER STYLES====== */
 
 .footer-style{

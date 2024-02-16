@@ -24,6 +24,7 @@ const user = auth.currentUser;
 function updateUserProfile(user) {
   const userNameElement = document.querySelector("#userName");
   const userNameSectionElement = document.querySelector("#userNameSection");
+  const userProfilePictureElement = document.querySelector("#userProfilePicture")
 
   if (userNameElement) {
     const userName = user.displayName;
@@ -33,6 +34,11 @@ function updateUserProfile(user) {
   if (userNameSectionElement) {
     const userName = user.displayName;
     userNameSectionElement.textContent = userName;
+  }
+
+  if (userProfilePicture) {
+    const userProfilePicture = user.photoURL;
+    userProfilePictureElement.src = userProfilePicture;
   }
 }
 

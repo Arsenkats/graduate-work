@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./js/main.js" defer type="module"></script>
     <script src="./js/update.js" defer type="module"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,9 +58,39 @@
         </div>
       </header>
       <main>
-        <section id="registration">
-          <h1>Your profile</h1>
-          <p id="userNameSection" class="registration-link"></p>
+        <section id="not-log-in" class="profile-info">
+          <div class="container halepa-cont">
+            <h2 class="halepa">От халепа :(</h2>
+            <p class="halepa-paragraph">Здається ви не авторизувалися!</p>
+          </div>
+        </section>
+        <section id="profile-info" class="profile-info">
+          <div class="container">
+            <div class="profile-name-container">
+              <img
+                id="userProfilePicture"
+                alt="profile picture"
+                class="profile-picture"
+                width="40"
+                height="40"
+              />
+              <h1 id="userNameSection" class=""></h1>
+            </div>
+            <p></p>
+            <div class="upload-photo halepa-cont">
+              <img id="myimg" height="200" /><br />
+              <label id="upprogres"></label><br />
+              <button id="selbtn" class="form-btn">Виберіть файл</button>
+              <br /><br />
+              <label>Назва файлу:</label>
+              <input type="text" id="namebox" /><label id="extlab"></label>
+              <br /><br />
+              <label>Опис фото:</label>
+              <input type="text" id="desbox" />
+              <br /><br />
+              <button id="upbtn" class="form-btn">Опублікувати</button>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer-style">
