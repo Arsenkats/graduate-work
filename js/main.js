@@ -5,6 +5,7 @@
   import { getFirestore, doc, getDoc, setDoc, collection, addDoc }
   from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
   
+  
   const firebaseConfig = {
     apiKey: "AIzaSyB-RglbxUd5dK3_4M20YrX2QZ3d2BqyV1U",
     authDomain: "graduate-work-8158d.firebaseapp.com",
@@ -187,11 +188,13 @@ async function Uploadprocess() {
 }
 
 // ====================Function for FIRESTORE DATABASE===============================
+// ====================Function for FIRESTORE DATABASE===============================
 async function SaveURLtoFirestore(url) {
   var name = namebox.value;
   var ext = extlab.innerHTML;
   var ImgDescription = desbox.value;
   var userId = auth.currentUser ? auth.currentUser.uid : null; // Отримати ідентифікатор користувача
+  var userDisplayName = auth.currentUser ? auth.currentUser.displayName : null; // Отримати ім'я користувача
 
   var ref = doc(clouddb, "ImageLinks/" + name);
 
@@ -199,11 +202,15 @@ async function SaveURLtoFirestore(url) {
     ImgName: (name + ext),
     ImgDescription: ImgDescription,
     ImageURL: url,
-    userId: userId // Додати ідентифікатор користувача до документа
+    userId: userId, // Додати ідентифікатор користувача до документа
+    userDisplayName: userDisplayName // Додати ім'я користувача до документа
   });
   location.reload();
 }
 
 
 
+
 UpBtn.onclick = Uploadprocess;
+
+
