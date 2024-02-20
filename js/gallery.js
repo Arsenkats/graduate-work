@@ -48,7 +48,7 @@ async function displayImages(auth, clouddb) {
       imageInfoDiv.appendChild(descriptionElement);
 
 const downloadLink = document.createElement('a');
-downloadLink.href = "#";  // Це тимчасове посилання
+downloadLink.href = "#";  
 downloadLink.target = '_blank'; 
 downloadLink.textContent = 'Завантаження';
 downloadLink.classList.add('download-links');
@@ -60,17 +60,17 @@ downloadLink.addEventListener("click", async (event) => {
     const response = await fetch(data.ImageURL);
     const blob = await response.blob();
 
-    // Створюємо тимчасовий URL для Blob
-    const blobUrl = URL.createObjectURL(blob);
+    // Викликати завантаження файлу
+    const downloadUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = data.ImgName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 
-    // Встановлюємо створений URL як посилання
-    downloadLink.href = blobUrl;
-
-    // Додаємо атрибут download з іменем файлу
-    downloadLink.download = data.ImgName;
-
-    // Запускаємо подію кліку
-    downloadLink.click();
+    // Видалити тимчасовий URL
+    URL.revokeObjectURL(downloadUrl);
   } catch (error) {
     console.error('Помилка завантаження:', error);
   }
@@ -94,4 +94,3 @@ imageInfoDiv.appendChild(downloadLink);
 // Виклик функції displayImages() при завантаженні сторінки
 window.onload = () => displayImages(auth, clouddb);
 
-// Решта коду...
