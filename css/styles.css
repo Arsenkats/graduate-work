@@ -211,6 +211,7 @@ header ul {
 .pofile-and-upload-container{
     display: flex;
     align-items: center;
+    margin-bottom: 26px;
 }
 
 .profile-info{
@@ -226,7 +227,7 @@ header ul {
     display: none;
 }
 
-.halepa-cont{
+.halepa-cont {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -238,13 +239,51 @@ header ul {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
-    border-radius: 30px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.upload-form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .halepa{
     color: #4de596;
     text-align: center;
     margin-bottom: 8px;
+}
+
+.upload-bg{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2e2f4261;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    
+}
+
+.modal-head{
+    display: flex;
+    align-items: center;
+}
+
+.clode-modal{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.clode-modal:hover{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #4de596;
+}
+
+.modal-head-title{
+    margin-right: auto;
 }
 
 .upload-area{
@@ -267,7 +306,7 @@ header ul {
     display: flex;
     gap: 16px;
     align-items: center;
-    margin-bottom: 16px;
+    
     margin-right: auto;
 }
 

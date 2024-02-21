@@ -6,6 +6,7 @@
     <script src="./js/main.js" defer type="module"></script>
     <script src="./js/update.js" defer type="module"></script>
     <script src="./js/usergallery.js" defer type="module"></script>
+    <script src="./js/modal.js" defer type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +30,37 @@
   </head>
   <body>
     <div class="page-container">
+      <div class="upload-bg" id="upload-modal">
+        <div class="upload-photo halepa-cont">
+          <div class="modal-head">
+            <h3 class="modal-head-title">Форма завантаження</h3>
+            <i class="ri-close-line clode-modal" id="close-modal"></i>
+          </div>
+          <!-- <form class="upload-form" name="upload-form"> -->
+          <img id="myimg" height="200" class="img-upload" />
+          <label id="upprogres"></label>
+          <button id="selbtn" class="form-btn">Виберіть файл</button>
+
+          <label>Назва файлу:</label>
+          <div>
+            <input
+              type="text"
+              id="namebox"
+              class="search-area upload-area"
+            /><label id="extlab"></label>
+          </div>
+          <label>Опис фото:</label>
+          <input type="text" id="desbox" class="search-area" />
+          <p class="pidkazka">
+            <i>
+              *опис фотографії враховується при визначенні того, чи потрібно
+              відображати фотографію під час пошуку</i
+            >
+          </p>
+          <button id="upbtn" class="form-btn">Опублікувати</button>
+          <!-- </form> -->
+        </div>
+      </div>
       <header class="page-header">
         <div class="container header-container">
           <nav class="header-nav">
@@ -82,32 +114,9 @@
                 />
                 <h1 id="userNameSection" class=""></h1>
               </div>
-              <button type="button" class="form-btn">
+              <button type="button" class="form-btn" id="upload-modal-btn">
                 Завантажити | <i class="ri-add-line"></i>
               </button>
-            </div>
-            <div class="upload-photo halepa-cont">
-              <img id="myimg" height="200" class="img-upload" />
-              <label id="upprogres"></label>
-              <button id="selbtn" class="form-btn">Виберіть файл</button>
-
-              <label>Назва файлу:</label>
-              <div>
-                <input
-                  type="text"
-                  id="namebox"
-                  class="search-area upload-area"
-                /><label id="extlab"></label>
-              </div>
-              <label>Опис фото:</label>
-              <input type="text" id="desbox" class="search-area" />
-              <p class="pidkazka">
-                <i>
-                  *опис фотографії враховується при визначенні того, чи потрібно
-                  відображати фотографію під час пошуку</i
-                >
-              </p>
-              <button id="upbtn" class="form-btn">Опублікувати</button>
             </div>
           </div>
           <div class="container img-item-container" id="userGallery"></div>
