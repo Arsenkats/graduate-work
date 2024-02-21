@@ -50,7 +50,7 @@ async function displayImages(auth, clouddb) {
 const downloadLink = document.createElement('a');
 downloadLink.href = "#";  
 downloadLink.target = '_blank'; 
-downloadLink.textContent = 'Завантаження';
+downloadLink.textContent = 'Завантажити';
 downloadLink.classList.add('download-links');
 
 downloadLink.addEventListener("click", async (event) => {
