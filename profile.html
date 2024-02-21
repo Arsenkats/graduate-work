@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
@@ -67,28 +71,42 @@
         </section>
         <section id="profile-info" class="profile-info">
           <div class="container">
-            <div class="profile-name-container">
-              <img
-                id="userProfilePicture"
-                alt="profile picture"
-                class="profile-picture"
-                width="40"
-                height="40"
-              />
-              <h1 id="userNameSection" class=""></h1>
+            <div class="pofile-and-upload-container">
+              <div class="profile-name-container">
+                <img
+                  id="userProfilePicture"
+                  alt="profile picture"
+                  class="profile-picture"
+                  width="40"
+                  height="40"
+                />
+                <h1 id="userNameSection" class=""></h1>
+              </div>
+              <button type="button" class="form-btn">
+                Завантажити | <i class="ri-add-line"></i>
+              </button>
             </div>
-            <p></p>
             <div class="upload-photo halepa-cont">
-              <img id="myimg" height="200" /><br />
-              <label id="upprogres"></label><br />
+              <img id="myimg" height="200" class="img-upload" />
+              <label id="upprogres"></label>
               <button id="selbtn" class="form-btn">Виберіть файл</button>
-              <br /><br />
+
               <label>Назва файлу:</label>
-              <input type="text" id="namebox" /><label id="extlab"></label>
-              <br /><br />
+              <div>
+                <input
+                  type="text"
+                  id="namebox"
+                  class="search-area upload-area"
+                /><label id="extlab"></label>
+              </div>
               <label>Опис фото:</label>
-              <input type="text" id="desbox" />
-              <br /><br />
+              <input type="text" id="desbox" class="search-area" />
+              <p class="pidkazka">
+                <i>
+                  *опис фотографії враховується при визначенні того, чи потрібно
+                  відображати фотографію під час пошуку</i
+                >
+              </p>
               <button id="upbtn" class="form-btn">Опублікувати</button>
             </div>
           </div>

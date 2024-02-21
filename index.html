@@ -6,12 +6,17 @@
     <script src="./js/main.js" defer type="module"></script>
     <script src="./js/update.js" defer type="module"></script>
     <script src="./js/gallery.js" defer type="module"></script>
+    <script src="./js/search.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,7 +65,20 @@
         </div>
       </header>
       <main>
-        <section class="section">
+        <section class="section-search" id="sectionSearchGallery">
+          <div class="container">
+            <form class="form-container" name="searchForm">
+              <input
+                class="search-area"
+                type="text"
+                placeholder="Що ви шукайте?"
+              />
+              <button type="button" class="form-btn">Пошук</button>
+            </form>
+            <div class="section img-item-container" id="searchGallery"></div>
+          </div>
+        </section>
+        <section class="section" id="mainGallery">
           <div class="container img-item-container" id="gallery"></div>
         </section>
       </main>
